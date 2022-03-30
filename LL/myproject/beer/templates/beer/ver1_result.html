@@ -102,7 +102,7 @@
                         <h1>{{a.name}}</h1><div class="classfication">{{a.classfications}}</div>
                         <p class="rate-and-address">💗{{a.rating}} 📮주소 {{a.address}} </p>
                         <p class="restaurant-hour">⏰영업시간{{a.hour}}</p> 
-                        <div class="restaurant-book">예약하기</div>
+                        <div class="restaurant-book">정보보기</div>
                     </div>
                     <hr width="70%">
                 </div>
@@ -145,7 +145,7 @@
             </div>
             <div id="toc-content12">
                 <p>
-                    {% if hotels1.count > 0 %}
+                    {% if hotels2.count > 0 %}
                     {% for a in hotels2 %}
                 <div class="hotel-contain">
                     <div class="hotel-contain-left">
@@ -175,7 +175,7 @@
                         <h1>{{a.name}}</h1><div class="classfication">{{a.classfications}}</div>
                         <p class="rate-and-address">💗{{a.rating}} 📮주소 {{a.address}} </p>
                         <p class="restaurant-hour">⏰영업시간{{a.hour}}</p> 
-                        <div class="restaurant-book">예약하기</div>
+                        <div class="restaurant-book">정보보기</div>
                     </div>
                     <hr width="70%">
                 </div>
@@ -217,7 +217,7 @@
             </div>
             <div id="toc-content13">
                 <p>
-                    {% if hotels1.count > 0 %}
+                    {% if hotels3.count > 0 %}
                     {% for a in hotels3 %}
                 <div class="hotel-contain">
                     <div class="hotel-contain-left">
@@ -247,7 +247,7 @@
                         <h1>{{a.name}}</h1><div class="classfication">{{a.classfications}}</div>
                         <p class="rate-and-address">💗{{a.rating}} 📮주소 {{a.address}} </p>
                         <p class="restaurant-hour">⏰영업시간{{a.hour}}</p> 
-                        <div class="restaurant-book">예약하기</div>
+                        <div class="restaurant-book">정보보기</div>
                     </div>
                     <hr width="70%">
                 </div>
@@ -258,5 +258,75 @@
         </div>
     </div>
 </div>
+<div class="ver3-wrapper">
+    <div class="ver3-result-contain">
+        <div>
+            <h1>네 번째 추천 여행지는 {{ result.0 }} 입니다.</h1>
+        </div>
+        <img class="result-img" src="static/mg/{{ result.0 }}.jfif" alt="사진은 수집중입니다😢">
+        <h2 class="result-h2"><span id="toc-toggle21" onclick="openCloseToc21()">맛집 보러 가기</span><span id="toc-toggle22" onclick="openCloseToc22()">관련 영상 보기</span><span class="ver3-result-hotel" id="toc-toggle23" onclick="openCloseToc23()">숙소 보러 가기</span>
+            <div id="toc-content22">
+                <video id="result0" class="video-js vjs-default-skin vjs-big-play-centered"
+                controls preload="none" style="width:50vw; height:55vh; margin:0 auto; display:block;"
+                crossorigin="anonymous">
+                    <source src="/static/md/{{result.0}}.webm" type="video/webm"/>
+                    <source src="/static/md/{{result.0}}.mp4" type="video/mp4"/>
+                    <p class="vjs-no-js">
+                        To view this video please enable JavaScript, and consider upgrading to
+                        a web browser that <a href="http://videojs.com/html5-video-support/"
+                        target="_blank">supports HTML5 video</a>
+                    </p>
+
+                    <script>
+                    videojs('result0', {
+                        plugins: {
+                            pannellum: {}
+                        }
+                    });
+                    
+                </script>
+                </video></h2>
+            </div>
+            <div id="toc-content23">
+                <p>
+                    {% if hotels4.count > 0 %}
+                    {% for a in hotels4 %}
+                <div class="hotel-contain">
+                    <div class="hotel-contain-left">
+                        <a href='{{a.url}}'><img class="hotel-img"src="static/mg/hotel/{{ a.name }}.jpg" alt="사진은 수집중입니다😢"></a><br><br>
+                    </div>
+                    <div class="hotel-contain-right">
+                        <h1>{{a.name}}</h1><div class="classfication">{{a.classfications}}</div>
+                        <p class="rate-and-review">👍{{a.rating}} ✍리뷰{{a.review}}</p>
+                        <div class="hotel-cost">{{a.cost}}</div> 
+                        <div class="hotel-book">예약하기</div>
+                    </div>
+                    <hr width="70%">
+                </div>
+                {% endfor %}
+                {% endif %}
+                </p>
+            </div>
+            <div id="toc-content21">
+                <p>
+                    {% if restaurant4.count > 0 %}
+                    {% for a in restaurant4 %}
+                <div class="hotel-contain">
+                    <div class="hotel-contain-left">
+                        <a href='{{a.url}}'><img class="hotel-img"src="static/mg/restaurant/{{ a.name }}.jpg" alt="사진은 수집중입니다😢"></a><br><br>
+                    </div>
+                    <div class="hotel-contain-right">
+                        <h1>{{a.name}}</h1><div class="classfication">{{a.classfications}}</div>
+                        <p class="rate-and-address">💗{{a.rating}} 📮주소 {{a.address}} </p>
+                        <p class="restaurant-hour">⏰영업시간{{a.hour}}</p> 
+                        <div class="restaurant-book">정보보기</div>
+                    </div>
+                    <hr width="70%">
+                </div>
+                {% endfor %}
+                {% endif %}
+                </p>
+            </div>
+    </div>
 </body>
 </html>

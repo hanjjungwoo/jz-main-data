@@ -44,7 +44,9 @@
                 <h1>첫 번째 추천 여행지는 {{ result.0 }}입니다.</h1>
             </div>
             <img class="result-img" src="static/mg/{{ result.0 }}.jfif" alt="사진은 수집중입니다😢">
-            <h2 class="result-h2"><span id="toc-toggle14" onclick="openCloseToc14()">맛집 보러 가기</span><span id="toc-toggle" onclick="openCloseToc()">관련 영상 보기</span><span class="ver3-result-hotel" id="toc-toggle7" onclick="openCloseToc7()">숙소 보러 가기</span>
+            <h2 class="result-h2"><span id="toc-toggle14" onclick="openCloseToc14()">맛집 보러 가기</span>
+                <span id="toc-toggle" onclick="openCloseToc()">관련 영상 보기</span>
+                <span class="ver3-result-hotel" id="toc-toggle7" onclick="openCloseToc7()">숙소 보러 가기</span>
                 <div id="toc-content">
                     <video id="result0" class="video-js vjs-default-skin vjs-big-play-centered"
                     controls preload="none" style="width:50vw; height:55vh; margin:0 auto; display:block"
@@ -79,7 +81,7 @@
                             <h1>{{a.name}}</h1><div class="classfication">{{a.classfications}}</div>
                             <p class="rate-and-review">👍{{a.rating}} ✍리뷰{{a.review}}</p>
                             <div class="hotel-cost">{{a.cost}}</div> 
-                            <div class="hotel-book">예약하기</div>
+                            <a href='{{a.url}}' class="hotel-book">예약하기</a>
                         </div>
                         <hr width="70%">
                     </div>
@@ -99,7 +101,7 @@
                             <h1>{{a.name}}</h1><div class="classfication">{{a.classfications}}</div>
                             <p class="rate-and-address">💗{{a.rating}} 📮주소 {{a.address}} </p>
                             <p class="restaurant-hour">⏰영업시간{{a.hour}}</p> 
-                            <div class="restaurant-book">예약하기</div>
+                            <a href='{{a.url}}' class="restaurant-book">정보보기</a>
                         </div>
                         <hr width="70%">
                     </div>
@@ -114,7 +116,9 @@
                 <h1>두 번째 추천 여행지는 {{ result.1 }} 입니다.</h1>
             </div>
             <img class="result-img" src="static/mg/{{ result.1 }}.jfif" alt="사진은 수집중입니다😢">
-            <h2 class="result-h2"><span id="toc-toggle15" onclick="openCloseToc15()">맛집 보러 가기</span><span id="toc-toggle1" onclick="openCloseToc1()">관련 영상 보기</span><span class="ver3-result-hotel" id="toc-toggle8" onclick="openCloseToc8()">숙소 보러 가기</span>
+            <h2 class="result-h2"><span id="toc-toggle15" onclick="openCloseToc15()">맛집 보러 가기</span>
+                <span id="toc-toggle1" onclick="openCloseToc1()">관련 영상 보기</span>
+                <span class="ver3-result-hotel" id="toc-toggle8" onclick="openCloseToc8()">숙소 보러 가기</span>
                 <div id="toc-content1">    
                     <video id="result1" class="video-js vjs-default-skin vjs-big-play-centered"
                     controls preload="none" style="width:50vw; height:55vh; margin:0 auto; display:block"
@@ -149,7 +153,7 @@
                             <h1>{{a.name}}</h1><div class="classfication">{{a.classfications}}</div>
                             <p class="rate-and-review">👍{{a.rating}} ✍리뷰{{a.review}}</p>
                             <div class="hotel-cost">{{a.cost}}</div>
-                            <div class="hotel-book">예약하기</div> 
+                            <a href='{{a.url}}' class="hotel-book">예약하기</a> 
                         </div>
                         <hr width="70%">
                     </div>
@@ -169,7 +173,7 @@
                             <h1>{{a.name}}</h1><div class="classfication">{{a.classfications}}</div>
                             <p class="rate-and-address">💗{{a.rating}} 📮주소 {{a.address}} </p>
                             <p class="restaurant-hour">⏰영업시간{{a.hour}}</p> 
-                            <div class="restaurant-book">예약하기</div>
+                            <a href='{{a.url}}' class="restaurant-book">정보보기</a>
                         </div>
                         <hr width="70%">
                     </div>
@@ -184,7 +188,9 @@
                 <h1>세 번째 추천 여행지는 {{ result.2 }} 입니다.</h1>
             </div>
             <img class="result-img" src="static/mg/{{ result.2 }}.jfif" alt="사진은 수집중입니다😢">
-            <h2 class="result-h2"><span id="toc-toggle16" onclick="openCloseToc16()">맛집 보러 가기</span><span id="toc-toggle2" onclick="openCloseToc2()">관련 영상 보기</span><span class="ver3-result-hotel" id="toc-toggle9" onclick="openCloseToc9()">숙소 보러 가기</span>
+            <h2 class="result-h2"><span id="toc-toggle16" onclick="openCloseToc16()">맛집 보러 가기</span>
+                <span id="toc-toggle2" onclick="openCloseToc2()">관련 영상 보기</span>
+                <span class="ver3-result-hotel" id="toc-toggle9" onclick="openCloseToc9()">숙소 보러 가기</span>
             <div id="toc-content2">
                 <video id="result2" class="video-js vjs-default-skin vjs-big-play-centered"
                 controls preload="none" style="width:50vw; height:55vh; margin:0 auto; display:block;"
@@ -219,7 +225,7 @@
                         <h1>{{a.name}}</h1><div class="classfication">{{a.classfications}}</div>
                         <p class="rate-and-review">👍{{a.rating}} ✍리뷰{{a.review}}</p>
                         <div class="hotel-cost">{{a.cost}}</div>
-                        <div class="hotel-book">예약하기</div> 
+                        <a href='{{a.url}}' class="hotel-book">예약하기</a> 
                     </div>
                     <hr width="70%">
                 </div>
@@ -239,7 +245,7 @@
                         <h1>{{a.name}}</h1><div class="classfication">{{a.classfications}}</div>
                         <p class="rate-and-address">💗{{a.rating}} 📮주소 {{a.address}} </p>
                         <p class="restaurant-hour">⏰영업시간{{a.hour}}</p> 
-                        <div class="restaurant-book">예약하기</div>
+                        <a href='{{a.url}}' class="restaurant-book">정보보기</a>
                     </div>
                     <hr width="70%">
                 </div>
@@ -254,7 +260,9 @@
             <h1>네 번째 추천 여행지는 {{ result.3 }} 입니다.</h1>
             </div>
             <img class="result-img" src="static/mg/{{ result.3 }}.jfif" alt="사진은 수집중입니다😢">
-            <h2 class="result-h2"><span id="toc-toggle17" onclick="openCloseToc17()">맛집 보러 가기</span><span id="toc-toggle3" onclick="openCloseToc3()">관련 영상 보기</span><span class="ver3-result-hotel" id="toc-toggle10" onclick="openCloseToc10()">숙소 보러 가기</span>
+            <h2 class="result-h2"><span id="toc-toggle17" onclick="openCloseToc17()">맛집 보러 가기</span>
+                <span id="toc-toggle3" onclick="openCloseToc3()">관련 영상 보기</span>
+                <span class="ver3-result-hotel" id="toc-toggle10" onclick="openCloseToc10()">숙소 보러 가기</span>
             <div id="toc-content3">
                 <video id="result3" class="video-js vjs-default-skin vjs-big-play-centered"
                 controls preload="none" style="width:50vw; height:55vh; margin:0 auto; display:block;"
@@ -289,7 +297,7 @@
                         <h1>{{a.name}}</h1><div class="classfication">{{a.classfications}}</div>
                         <p class="rate-and-review">👍{{a.rating}} ✍리뷰{{a.review}}</p>
                         <div class="hotel-cost">{{a.cost}}</div> 
-                        <div class="hotel-book">예약하기</div>
+                        <a href='{{a.url}}' v class="hotel-book">예약하기</a>
                     </div>
                     <hr width="70%">
                 </div>
@@ -309,7 +317,7 @@
                         <h1>{{a.name}}</h1><div class="classfication">{{a.classfications}}</div>
                         <p class="rate-and-address">💗{{a.rating}} 📮주소 {{a.address}} </p>
                         <p class="restaurant-hour">⏰영업시간{{a.hour}}</p> 
-                        <div class="restaurant-book">예약하기</div>
+                        <a href='{{a.url}}' class="restaurant-book">정보보기</a>
                     </div>
                     <hr width="70%">
                 </div>

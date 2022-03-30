@@ -264,3 +264,34 @@ function openCloseToc() {
               document.getElementById('toc-toggle20').textContent = '그만보기';
             }
           }
+
+// ver1 네번째 맛집, 영상, 숙소
+function openCloseToc21() {
+  if(document.getElementById('toc-content21').style.display === 'block') {
+    document.getElementById('toc-content21').style.display = 'none';
+    document.getElementById('toc-toggle21').textContent = '맛집 보러 가기';
+  } else {
+    document.getElementById('toc-content21').style.display = 'block';
+    document.getElementById('toc-toggle21').textContent = '그만보기';
+  }
+}
+
+function openCloseToc22() {
+  if(document.getElementById('toc-content22').style.display === 'block') {
+    document.getElementById('toc-content22').style.display = 'none';
+    document.getElementById('toc-toggle22').textContent = '관련 영상보기';
+  } else {
+    document.getElementById('toc-content22').style.display = 'block';
+    document.getElementById('toc-toggle22').textContent = '그만보기';
+  }
+}
+
+function openCloseToc23() {
+  if(document.getElementById('toc-content23').style.display === 'block') {
+    document.getElementById('toc-content23').style.display = 'none';
+    document.getElementById('toc-toggle23').textContent = '숙소 보러 가기';
+  } else {
+    document.getElementById('toc-content23').style.display = 'block';
+    document.getElementById('toc-toggle23').textContent = '그만보기';
+  }
+}
